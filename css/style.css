@@ -1,0 +1,90 @@
+html, body
+{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+.flag
+{
+  width: 500px;
+  height: 240px;
+  background: green;
+  background-image: linear-gradient(0deg, transparent 50%, rgba(0,0,0,1) 50%);
+background-size: 50px 50px;
+  display: flex;
+  padding: 0;
+  margin: 0px auto;
+  margin-top: 80px;
+}
+
+.block
+{
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  position: relative;
+}
+
+.block:first-child::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  border:  120px solid;
+  border-color:  transparent transparent transparent red;
+}
+
+
+.block:last-child::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  border:  120px solid;
+  border-color:  transparent yellow transparent transparent;
+}
+
+.block:nth-child(2)
+{
+  flex: 1.5;
+  display: flex;
+}
+
+.diamond
+{
+  margin: auto;
+/*   transform: scale(1.1); */
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.diamond:after
+{
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  border:  40px solid;
+  border-color: white transparent transparent  transparent;
+}
+.diamond:before
+{
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  border:  40px solid;
+  border-color:  transparent transparent white transparent;
+}
+
